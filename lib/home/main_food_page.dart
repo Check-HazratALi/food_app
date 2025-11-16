@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/home/food_page_body.dart';
 import 'package:food_app/utils/colors.dart';
 import 'package:food_app/widgets/big_text.dart';
 import 'package:food_app/widgets/small_text.dart';
@@ -16,6 +17,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
     return Scaffold(
       body: Column(
         children: [
+          //showing the header
           Container(
             child: Container(
               margin: EdgeInsets.only(top: 45, bottom: 15),
@@ -50,6 +52,11 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ),
             ),
           ),
+          
+          //showing the body
+          FoodPageBody(),
+
+          
         ],
       ),
     );
