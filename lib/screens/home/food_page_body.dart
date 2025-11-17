@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/utils/colors.dart';
 import 'package:food_app/utils/dimension.dart';
+import 'package:food_app/widgets/app_column.dart';
 import 'package:food_app/widgets/big_text.dart';
 import 'package:food_app/widgets/icon_and_text_widget.dart';
 import 'package:food_app/widgets/small_text.dart';
@@ -136,36 +137,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                           left: Dimension.width10,
                           right: Dimension.width10,
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            BigText(text: "Nutritious fruit meal in China"),
-                            SizedBox(height: Dimension.height10),
-                            SmallText(text: "With chinese characteristics"),
-                            SizedBox(height: Dimension.height10),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                IconAndTextWidget(
-                                  icon: Icons.circle_sharp,
-                                  iconColor: AppColors.iconColor1, 
-                                  text: "Normal",
-                                ),
-                                IconAndTextWidget(
-                                  icon: Icons.location_on,
-                                  iconColor: AppColors.mainColor, 
-                                  text: "1.7km",
-                                ),
-                                IconAndTextWidget(
-                                  icon: Icons.access_time_rounded,
-                                  iconColor: AppColors.iconColor2, 
-                                  text: "32min",
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                        child: AppColumn(text: 'Biriyani',),
                       ),
                     ),
                   ),
