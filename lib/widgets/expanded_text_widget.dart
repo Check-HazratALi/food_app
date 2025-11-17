@@ -37,42 +37,40 @@ class _ExpandedTextWidgetState extends State<ExpandedTextWidget> {
     return Container(
       child: secondHalf.isEmpty
           ? Text(firstHalf)
-          : Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                  children: [
-                    Text(
-                      hiddenText ? (firstHalf + "...") : (firstHalf + secondHalf),
-                      style: TextStyle(
-                        height: 1.8,
-                        fontSize: Dimension.font16,
-                        color: Colors.black54,
-                      ),
+          : SingleChildScrollView(
+            child: Column(
+                children: [
+                  Text(
+                    hiddenText ? (firstHalf + "...") : (firstHalf + secondHalf),
+                    style: TextStyle(
+                      height: 1.8,
+                      fontSize: Dimension.font16,
+                      color: Colors.black54,
                     ),
-                    InkWell(
-                      onTap: () {
-                        setState(() {
-                          hiddenText = !hiddenText;
-                        });
-                      },
-                      child: Row(
-                        children: [
-                          Text(
-                            hiddenText ? "Show more" : "Show less",
-                            style: const TextStyle(color: Color(0xFF89dad0)),
-                          ),
-                          Icon(
-                            hiddenText
-                                ? Icons.arrow_drop_down
-                                : Icons.arrow_drop_up,
-                            color: const Color(0xFF89dad0),
-                          ),
-                        ],
-                      ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        hiddenText = !hiddenText;
+                      });
+                    },
+                    child: Row(
+                      children: [
+                        Text(
+                          hiddenText ? "Show more" : "Show less",
+                          style: const TextStyle(color: Color(0xFF89dad0)),
+                        ),
+                        Icon(
+                          hiddenText
+                              ? Icons.arrow_drop_down
+                              : Icons.arrow_drop_up,
+                          color: const Color(0xFF89dad0),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-            ),
+                  ),
+                ],
+              ),
           ),
     );
   }
