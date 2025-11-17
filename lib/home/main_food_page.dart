@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/home/food_page_body.dart';
 import 'package:food_app/utils/colors.dart';
+import 'package:food_app/utils/dimension.dart';
 import 'package:food_app/widgets/big_text.dart';
 import 'package:food_app/widgets/small_text.dart';
 
@@ -20,8 +21,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
           //showing the header
           Container(
             child: Container(
-              margin: EdgeInsets.only(top: 45, bottom: 15),
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.only(top: Dimension.height45, bottom: Dimension.height15),
+              padding: EdgeInsets.symmetric(horizontal: Dimension.radius20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -39,12 +40,12 @@ class _MainFoodPageState extends State<MainFoodPage> {
 
                   Center(
                     child: Container(
-                      width: 45,
-                      height: 45,
-                      child: Icon(Icons.search, color: Colors.white, size: 25),
+                      width: Dimension.width45,
+                      height: Dimension.height45,
+                      child: Icon(Icons.search, color: Colors.white, size: Dimension.iconSize24),
                       decoration: BoxDecoration(
                         color: AppColors.mainColor,
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(Dimension.radius15),
                       ),
                     ),
                   ),
@@ -54,7 +55,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
           ),
           
           //showing the body
-          FoodPageBody(),
+          Expanded(child: SingleChildScrollView(child: FoodPageBody())),
 
           
         ],

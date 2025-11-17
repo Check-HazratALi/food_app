@@ -13,6 +13,7 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   dots_indicator: ^4.0.1
+  get: ^4.7.2
 
 dev_dependencies:
   flutter_test:
